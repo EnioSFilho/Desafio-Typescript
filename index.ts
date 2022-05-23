@@ -18,3 +18,36 @@ interface Animais {
   asas: boolean,
   região: string,
 }
+
+
+
+
+
+interface Animais{
+  nome: string,
+  
+}
+interface peso{
+  peso: number
+}
+
+const postAnimais = (): Omit<Animais, "peso">  => {
+  return {
+      nome: "João",
+      peso: 80,
+  }
+}
+
+
+interface Humano {
+  nome:string
+}
+
+const postAnimais2 = (): Partial<Humano> => {
+  return {
+      nome: 'João',
+  }
+}
+
+
+
