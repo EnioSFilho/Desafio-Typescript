@@ -3,10 +3,9 @@ const diaDoMes: number = 12;
 const hojeFezSol: boolean = true;
 
 
-
 type Cachorrro = {
   nome: string,
-   idade: number,
+  idade: number,
   raça: boolean,
   grandePorte: boolean,
   donos: string
@@ -16,36 +15,32 @@ interface Animais {
   tipo: string,
   bipede: boolean,
   asas: boolean,
-  região: string,
-}
-
-
-
-
-
-interface Animais{
+  regiao: string,
+  peso: string,
   nome: string,
-  
-}
-interface peso{
-  peso: number
+
 }
 
-const postAnimais = (): Omit<Animais, "peso">  => {
+
+const postAnimais = (): Omit<Animais, "tipo"> => {
   return {
-      nome: "João",
-      peso: 80,
+    peso: " 80",
+    nome: "João",
+    asas: false,
+    regiao: 'logo ali',
+    bipede: true
+
+
   }
 }
 
-
 interface Humano {
-  nome:string
+  nome: string
 }
 
 const postAnimais2 = (): Partial<Humano> => {
   return {
-      nome: 'João',
+    nome: 'João',
   }
 }
 
